@@ -52,6 +52,7 @@ end
 #     false
 # end
 
-# --- run ---
 pp contains_duplicate(nums)
 
+count = [0,0,0,0]
+count.all? {|e| e == 0}

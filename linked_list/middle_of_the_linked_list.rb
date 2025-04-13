@@ -70,3 +70,8 @@ def middle_node(head)
 end
 
 pp middle_node(head)
+
+
+1 --> 2 --> 3 --> 4 --> 5
+pointer_1 = pointer_1.next
+pointer_2 = pointer_2.next.next

@@ -1,7 +1,7 @@
 # nums = [2, 7, 11, 15, 8, 1]
 # target = 9
-nums = [-3,4,3,90]
-target = 0
+# nums = [-3,4,3,90]
+# target = 0
 # nums = [9996,9997,9998,9999,10000]
 # target = 19999
 
@@ -41,59 +41,62 @@ target = 0
 # end
 # pp two_sum2(nums, target)
 
-nums = [3,2,4]
-target = 6
-def two_sum3(nums, target)
-  indices = {}
-  nums.each_with_index { |num, index| indices[num] = index }
-  # indices = {3=>0, 2=>1, 4=>2}
-  nums.each_with_index do |num, index|
-    # [3,0]
-    # [2,1]
-    # [4,2]
-    diff = target - num
-    # 6-3=3
-    # 6-2=4
-    # indices[diff] = 2
-    if indices[diff] != nil && indices[diff] != index
-      return [indices[diff], index]
-    end
-  end
-end
-pp two_sum3(nums, target)
+# nums = [3,2,4]
+# target = 6
+# def two_sum3(nums, target)
+#   indices = {}
+#   nums.each_with_index { |num, index| indices[num] = index }
+#   # indices = {3=>0, 2=>1, 4=>2}
+#   nums.each_with_index do |num, index|
+#     # [3,0]
+#     # [2,1]
+#     # [4,2]
+#     diff = target - num
+#     # 6-3=3
+#     # 6-2=4
+#     # indices[diff] = 2
+#     if indices[diff] != nil && indices[diff] != index
+#       return [indices[diff], index]
+#     end
+#   end
+# end
+# pp two_sum3(nums, target)
+
+# nums = [3,2,4]
+# target = 6
+# def two_sum4(nums, target)
+#   indices = {}
+#   nums.each_with_index do |num, index|
+#     # [3,0]
+#     # [2,1]
+#     # [4,2]
+#     diff = target - num
+#     # 6-3=3
+#     # 6-2=4
+#     # 6-4=2
+#     # indices[diff] = 2
+#     if indices[diff] != nil
+#       return [indices[diff], index]
+#     end
+#     indices[num] = index
+#     # indices = {3=>0, 2=>1}
+#   end
+# end
+# pp two_sum4(nums, target)
 
 nums = [3,2,4]
 target = 6
-def two_sum4(nums, target)
-  indices = {}
-  nums.each_with_index do |num, index|
-    # [3,0]
-    # [2,1]
-    # [4,2]
-    diff = target - num
-    # 6-3=3
-    # 6-2=4
-    # 6-4=2
-    # indices[diff] = 2
-    if indices[diff] != nil
-      return [indices[diff], index]
-    end
-    indices[num] = index
-    # indices = {3=>0, 2=>1}
-  end
-end
-pp two_sum4(nums, target)
+# def two_sum4(nums, target)
+#   indices = {}
+#   nums.each_with_index do |num, index|
+#     diff = target - num
+#     return [indices[diff], index] if indices[diff] != nil
 
-def two_sum4(nums, target)
-  indices = {}
-  nums.each_with_index do |num, index|
-    diff = target - num
-    return [indices[diff], index] if indices[diff] != nil
+#     indices[num] = index
+#   end
+# end
+# pp two_sum4(nums, target)
 
-    indices[num] = index
-  end
-end
-pp two_sum4(nums, target)
 
 # ----
 # target = 13

@@ -101,3 +101,14 @@ def remove_elements(head, val)
 end
 
 pp remove_elements(head, val)
+
+
+# 1 --> 2 --> 6 --> 3, val = 6
+# nil --> 6 --> 6 --> 6 --> 3, val = 6
+dummyNode = nil
+dummyNode = head
+if node.next.val == val
+    node.next = node.next.next
+else
+    node = node.next
+end
