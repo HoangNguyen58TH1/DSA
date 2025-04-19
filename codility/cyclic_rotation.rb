@@ -1,10 +1,10 @@
-def solution(a, k)
-  return a if a.empty?
+def solution(nums, k)
+  return nums if nums.empty?
 
-  k = k % a.length
-  return a if k == 0
+  k = k % nums.length
+  return nums if k == 0
 
-  a[-k..-1] + a[0...-k]
+  nums[-k..-1] + nums[0...-k]
 
   # index_start = a.length - k
   # new_arr = []
@@ -32,3 +32,5 @@ pp solution([0, 0, 0], 1)       # => [0, 0, 0]
 pp solution([1, 2, 3, 4], 4)     # => [1, 2, 3, 4]
 pp solution([1, 2, 3, 4], 5)     # => [4, 1, 2, 3]
 pp solution([], 1) # => []
+pp solution([1,2,3,4,5,6,7], 3) # => []
+

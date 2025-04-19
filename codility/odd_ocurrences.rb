@@ -27,3 +27,5 @@ end
 pp solution([9, 3, 9, 3, 9, 7, 9]) # => 7
 pp solution([1, 2, 1])             # => 2
 pp solution([42])                  # => 42
+
+odd ccurrences

@@ -1,4 +1,4 @@
- def solution(a)
+def solution(a)
   posities = a.select(&:positive?)
   hash = {}
 
@@ -20,3 +20,6 @@ pp solution([-1, -3])         # => 1
 pp solution([1, 2, 3])        # => 4
 pp solution([1000, 2000])     # => 1
 pp solution((1..1000000).to_a) # => 1000001
+
+# (1..1000000).to_a
+# rand(1..100_000)
